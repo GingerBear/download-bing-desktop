@@ -2,6 +2,7 @@ var http = require('http');
 var fs = require('fs');
 
 var INTERVAL = 1000 * 60 * 60 * 24; // a day
+var LOCAL_PATH = 'C:\\Users\\neild\\Pictures\\desktop_bg\\';
 
 main();
 
@@ -15,7 +16,7 @@ function main() {
 
     if (imgUrl) {
       var fullImgUrl = 'http://www.bing.com/' + imgUrl;
-      var filePath = `C:\\Users\\neild\\Pictures\\desktop_bg\\${getDate()}.jpg`;
+      var filePath = LOCAL_PATH + `${getDate()}.jpg`;
       var writeStream = fs.createWriteStream(filePath);
 
       return http.get(fullImgUrl, (res) => {
