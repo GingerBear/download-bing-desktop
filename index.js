@@ -1,7 +1,7 @@
 var http = require('http');
 var fs = require('fs');
 
-var INTERVAL = 1000 * 60 * 60 * 24; // a day
+var INTERVAL = 1000 * 60 * 60; // a hour
 var LOCAL_PATH = 'C:\\Users\\neild\\Pictures\\desktop_bg\\';
 
 main();
